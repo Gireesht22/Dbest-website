@@ -18,9 +18,9 @@
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" href="favicon-512.png" sizes="512x512">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="48x48">
+<link rel="icon" type="image/png" href="favicon-512.png?v=2" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 <link rel="preload" as="image" href="images/hero-slide-1.jpg">
 
 <script type="application/ld+json">
@@ -31,7 +31,7 @@
   "alternateName": "DBEST",
   "description": "Interior fit-out, civil and maintenance contractor for corporate offices, cafés, retail stores and residential villas.",
   "image": "images/hero-slide-1.jpg",
-  "logo": "logos/dbest-logo.png",
+  "logo": "logos/dbest-logo-gold.png",
   "email": "info.dbest85@gmail.com",
   "telephone": "+91-8527747545",
   "taxID": "07FHRPP3804A1ZC",
@@ -51,9 +51,16 @@
   "knowsAbout": ["Office interior fit-out", "Commercial interior design", "Café and retail fit-out", "Villa interiors", "Civil works", "Renovation"]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
+<style>
+  @font-face{
+    font-family:'Inter';
+    font-style:normal;
+    font-weight:400 800;
+    font-display:swap;
+    src:url(fonts/inter-latin.woff2) format('woff2');
+  }
+</style>
 <style>
   :root{
     --charcoal:#2A2E33;
@@ -102,6 +109,14 @@
     transform:translateY(24px);
     transition:opacity 0.7s ease, transform 0.7s ease;
   }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *, *::before, *::after{
+      animation-duration:0.01ms !important;
+      transition-duration:0.01ms !important;
+    }
+    .fade-in{opacity:1;transform:none;}
+  }
   .fade-in.visible{
     opacity:1;
     transform:translateY(0);
@@ -119,7 +134,7 @@
 
   .navbar-inner{
     width:100%;
-    padding:18px var(--pad-desktop);
+    padding:10px var(--pad-desktop);
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -148,12 +163,14 @@
   }
 
   .logo-img{
-    height:40px;
+    height:56px;
     width:auto;
+    display:block;
   }
-  .footer-brand .logo-img{height:44px;}
+  .footer-brand .logo-img{height:72px;}
   @media (max-width: 800px){
-    .logo-img{height:32px;}
+    .logo-img{height:46px;}
+    .footer-brand .logo-img{height:64px;}
   }
 
   .navbar-inner nav{
@@ -982,9 +999,35 @@
     min-height:1em;
   }
 
+  .consent-field{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin:4px 0 18px;
+  }
+  .consent-field input{
+    width:18px;
+    height:18px;
+    margin-top:3px;
+    flex-shrink:0;
+    accent-color:var(--accent);
+    cursor:pointer;
+  }
+  .consent-field label{
+    font-size:13px;
+    line-height:1.55;
+    color:#5a6068;
+    cursor:pointer;
+  }
+  .consent-field a{
+    color:var(--accent);
+    font-weight:600;
+    text-decoration:underline;
+  }
+
   .contact-privacy-note{
     font-size:12.5px;
-    color:#8b939b;
+    color:#6B7178;
     margin-top:10px;
   }
 
@@ -1038,7 +1081,7 @@
   }
 
   .contact-sub{
-    color:#8b939b;
+    color:#6B7178;
     font-size:13px;
     margin-top:2px;
   }
@@ -1175,7 +1218,7 @@
   .site-footer{
     background:#F4F5F6;
     border-top:1px solid var(--border);
-    padding:48px 0;
+    padding:48px 0 112px;
   }
   .footer-inner{
     max-width:var(--max-width);
@@ -1271,7 +1314,7 @@
 <!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="navbar-inner">
-    <a href="#" class="logo"><img src="logos/dbest-logo.png" alt="DBEST Innovation" class="logo-img"></a>
+    <a href="#" class="logo"><img src="logos/dbest-logo-gold.png" alt="DBEST Innovation" class="logo-img"></a>
 
     <nav>
       <ul class="nav-links">
@@ -1448,6 +1491,27 @@
       <p>A closer look at the corporate offices, retail hubs, and bespoke residential villas we've delivered.</p>
     </div>
 
+    <div class="category-block fade-in" id="cars24-project">
+      <h3 class="category-title">CARS24 &ndash; Branded Workspace Fit-Out</h3>
+      <div class="category-grid" data-category="cars24">
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-1.jpg" alt="CARS24 branded storefront with glass frontage" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-2.jpg" alt="CARS24 reception with illuminated logo and wood-panel wall" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-3.jpg" alt="Branded lobby with CARS24 signage and polished flooring" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-4.jpg" alt="Reception counter and lounge with patterned flooring" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-5.jpg" alt="Open lounge and collaboration area with acoustic ceiling" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-6.jpg" alt="Glass-partitioned meeting area with colour accents" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-7.jpg" alt="Open workspace with colourful ceiling baffles" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-8.jpg" alt="Large open-plan workstation floor" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-9.jpg" alt="Long workstation table in an open-plan office" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-10.jpg" alt="Workstation area with framed wall display" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-11.jpg" alt="Open-plan office with colourful accent wall" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-12.jpg" alt="Glass-walled meeting room with orange carpet" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-13.jpg" alt="Pantry and cafe seating area" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-14.jpg" alt="Branded event stage area with green LED lighting" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/cars24/cars24-15.jpg" alt="Corridor with CARS24 branded wall graphics" loading="lazy"></div>
+      </div>
+    </div>
+
     <div class="category-block fade-in">
       <h3 class="category-title">Corporate Offices</h3>
       <div class="category-grid" data-category="office">
@@ -1593,9 +1657,14 @@
             <textarea id="brief" name="brief" rows="4" placeholder="Tell us about your project — space type, size, timeline, and any reference images or links..."></textarea>
           </div>
 
+          <div class="consent-field">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to DBest Innovation using my name, email and project details to respond to this enquiry and prepare a quote, as described in the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>. I can withdraw this consent at any time by emailing <a href="mailto:info.dbest85@gmail.com">info.dbest85@gmail.com</a>.</label>
+          </div>
+
           <button type="submit" class="btn-primary contact-submit">Send Brief on WhatsApp <span>&rarr;</span></button>
           <p class="contact-form-note" id="contactFormNote"></p>
-          <p class="contact-privacy-note">Your details are used only to respond to this enquiry — never shared or sold.</p>
+          <p class="contact-privacy-note">Submitting opens WhatsApp with your message pre-filled — nothing is sent until you press Send there. We never sell your data.</p>
         </form>
       </div>
 
@@ -1670,7 +1739,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="#" class="logo"><img src="logos/dbest-logo.png" alt="DBEST Innovation" class="logo-img"></a>
+      <a href="#" class="logo"><img src="logos/dbest-logo-gold.png" alt="DBEST Innovation" class="logo-img"></a>
       <p class="footer-tagline">Construction &amp; Interior Fit-Out Services</p>
     </div>
 
@@ -1679,9 +1748,11 @@
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
     </ul>
 
-    <p class="footer-copy">&copy; 2026 DBest Innovation &middot; New Delhi &middot; All rights reserved<br>GSTIN: 07FHRPP3804A1ZC</p>
+    <p class="footer-copy">&copy; 2026 DBest Innovation &middot; New Delhi &middot; All rights reserved<br>GSTIN: 07FHRPP3804A1ZC<br>All third-party names, logos and trademarks belong to their respective owners.</p>
   </div>
 </footer>
 
@@ -1753,8 +1824,12 @@
   function nextSlide(){ goToSlide(current + 1); }
   function prevSlide(){ goToSlide(current - 1); }
 
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sliderPaused = false;
+
   function resetInterval(){
     clearInterval(slideInterval);
+    if (reduceMotion || sliderPaused) return;
     slideInterval = setInterval(nextSlide, 5000);
   }
 
@@ -1763,6 +1838,14 @@
   });
   document.getElementById('heroPrev').addEventListener('click', function(){
     prevSlide(); resetInterval();
+  });
+
+  var heroSlider = document.getElementById('heroSlider');
+  ['mouseenter', 'focusin'].forEach(function(evt){
+    heroSlider.addEventListener(evt, function(){ sliderPaused = true; resetInterval(); });
+  });
+  ['mouseleave', 'focusout'].forEach(function(evt){
+    heroSlider.addEventListener(evt, function(){ sliderPaused = false; resetInterval(); });
   });
 
   resetInterval();
@@ -1781,14 +1864,16 @@
   });
 
   var autoScrollDirection = 1;
-  setInterval(function(){
-    if (logoCarousel.scrollLeft + logoCarousel.clientWidth >= logoCarousel.scrollWidth - 2) {
-      autoScrollDirection = -1;
-    } else if (logoCarousel.scrollLeft <= 0) {
-      autoScrollDirection = 1;
-    }
-    logoCarousel.scrollLeft += autoScrollDirection * 0.6;
-  }, 30);
+  if (!reduceMotion) {
+    setInterval(function(){
+      if (logoCarousel.scrollLeft + logoCarousel.clientWidth >= logoCarousel.scrollWidth - 2) {
+        autoScrollDirection = -1;
+      } else if (logoCarousel.scrollLeft <= 0) {
+        autoScrollDirection = 1;
+      }
+      logoCarousel.scrollLeft += autoScrollDirection * 0.6;
+    }, 30);
+  }
 
   // ---------- Portfolio lightbox ----------
   var lightbox = document.getElementById('lightbox');
