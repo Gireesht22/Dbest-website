@@ -191,6 +191,7 @@
     font-weight:500;
     padding:10px 16px;
     border-radius:6px;
+    white-space:nowrap;
     transition:color 0.2s ease, background 0.2s ease;
   }
   .nav-links a:hover{
@@ -538,6 +539,28 @@
     transform:translateX(4px);
   }
 
+  /* ---------- REPAIR & MAINTENANCE ---------- */
+  .maintenance{
+    background:linear-gradient(135deg,#1F5E78 0%,#184a5f 100%);
+    color:var(--white);
+    padding:72px 0;
+  }
+  .maintenance-inner{
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .maintenance .eyebrow-line{color:#E3EEF3;margin-bottom:16px;}
+  .maintenance .eyebrow-line i{background:#8CC4DC;}
+  .maintenance h2{font-size:34px;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px;}
+  .maintenance-copy > p{font-size:16px;line-height:1.7;color:#E3EEF3;margin-bottom:26px;max-width:520px;}
+  .maintenance-cta{display:inline-block;background:var(--white);color:var(--accent);padding:14px 26px;border-radius:6px;font-size:15px;font-weight:700;transition:background .2s ease,color .2s ease;}
+  .maintenance-cta:hover{background:#E8F2F6;color:var(--accent-dark);}
+  .maintenance-copy .maintenance-note{font-size:13px;color:#C7DDE7;margin:14px 0 0;}
+  .maintenance-chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;}
+  .maintenance-chips li{padding:9px 16px;border:1px solid rgba(255,255,255,0.28);background:rgba(255,255,255,0.08);border-radius:999px;font-size:14px;font-weight:500;}
+
   /* ---------- LOGO STRIP ---------- */
   .logo-strip{
     background:var(--white);
@@ -630,6 +653,27 @@
     font-weight:700;
     color:var(--body-text);
   }
+
+  .projects-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .btn-outline-dark{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 20px;
+    border:1.5px solid var(--accent);
+    border-radius:6px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--accent);
+    white-space:nowrap;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .btn-outline-dark svg{width:16px;height:16px;flex-shrink:0;}
+  .btn-outline-dark:hover{background:var(--accent);color:var(--white);}
 
   .btn-teal{
     background:var(--accent);
@@ -1177,7 +1221,14 @@
     .logo{font-size:24px;}
   }
 
+  @media (max-width: 1000px){
+    .nav-links,.nav-right .btn-cta{display:none;}
+    .hamburger{display:flex;}
+  }
+
   @media (max-width: 900px){
+    .maintenance-inner{grid-template-columns:1fr;gap:32px;}
+    .maintenance h2{font-size:28px;}
     .hero-text h1{font-size:38px;}
     .bento-card.large,.bento-card.small,.bento-card.half{grid-column:span 10;}
     .category-grid{grid-template-columns:repeat(3,1fr);}
@@ -1320,6 +1371,7 @@
       <ul class="nav-links">
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#maintenance">Repair &amp; Maintenance</a></li>
         <li><a href="#process">Our Process</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
@@ -1336,6 +1388,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#expertise">Expertise</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#maintenance">Repair &amp; Maintenance</a>
     <a href="#process">Our Process</a>
     <a href="#contact">Contact Us</a>
     <a href="#contact" class="btn-cta">Request a Consultation</a>
@@ -1430,6 +1483,35 @@
   </div>
 </section>
 
+<!-- ================= REPAIR & MAINTENANCE ================= -->
+<section class="maintenance" id="maintenance">
+  <div class="container maintenance-inner">
+    <div class="maintenance-copy fade-in">
+      <span class="eyebrow-line"><i></i>REPAIR &amp; MAINTENANCE</span>
+      <h2>Keep your space running, long after handover</h2>
+      <p>We also repair and maintain commercial fit-outs and turnkey projects. Tell us what needs attention, add photos from your phone, and our site-visit team will contact you to inspect and quote.</p>
+      <a href="repair-maintenance.html" class="btn-primary maintenance-cta">Request a site visit</a>
+      <p class="maintenance-note">Upload up to 10 photos &middot; Pricing shared after inspection</p>
+    </div>
+    <ul class="maintenance-chips fade-in" aria-label="Services we repair and maintain">
+      <li>Electrical</li>
+      <li>Plumbing &amp; sanitary</li>
+      <li>Roofing &amp; waterproofing</li>
+      <li>Painting</li>
+      <li>Cleaning &amp; deep cleaning</li>
+      <li>False ceiling</li>
+      <li>Carpentry &amp; furniture</li>
+      <li>Flooring</li>
+      <li>Glass &amp; partitions</li>
+      <li>AC / HVAC</li>
+      <li>Civil &amp; masonry</li>
+      <li>Fire safety</li>
+      <li>CCTV &amp; data</li>
+      <li>Annual maintenance (AMC)</li>
+    </ul>
+  </div>
+</section>
+
 <!-- ================= CLIENT LOGO STRIP ================= -->
 <section class="logo-strip">
   <div class="container logo-strip-inner">
@@ -1452,7 +1534,13 @@
   <div class="container">
     <div class="projects-header fade-in">
       <h2>Our Signature Projects</h2>
-      <a href="#portfolio" class="btn-teal">View All Projects</a>
+      <div class="projects-actions">
+        <a href="downloads/DBest-Innovation-Company-Profile.pdf" class="btn-outline-dark" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+          Company Profile (PDF, 11 MB)
+        </a>
+        <a href="#portfolio" class="btn-teal">View All Projects</a>
+      </div>
     </div>
 
     <div class="bento-grid">
@@ -1545,6 +1633,11 @@
         <div class="gallery-thumb"><img src="images/projects/villa/villa-2.jpg" alt="Residential villa interior project 2 by DBest Innovation" loading="lazy"></div>
         <div class="gallery-thumb"><img src="images/projects/villa/villa-3.jpg" alt="Residential villa interior project 3 by DBest Innovation" loading="lazy"></div>
         <div class="gallery-thumb"><img src="images/projects/villa/villa-4.jpg" alt="Residential villa interior project 4 by DBest Innovation" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/villa/villa-5.jpg" alt="Villa boardroom with green padded wall and white conference table" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/villa/villa-6.jpg" alt="Villa meeting room with wooden conference table and blue pendant light" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/villa/villa-7.jpg" alt="Villa conference and lounge area with marble flooring" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/villa/villa-8.jpg" alt="Villa home-office workstations with white desks" loading="lazy"></div>
+        <div class="gallery-thumb"><img src="images/projects/villa/villa-9.jpg" alt="Villa lounge with curved tan leather sofa and chandelier" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -1746,8 +1839,10 @@
     <ul class="footer-links">
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="repair-maintenance.html">Repairs</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="downloads/DBest-Innovation-Company-Profile.pdf" download>Company Profile</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms</a></li>
     </ul>
