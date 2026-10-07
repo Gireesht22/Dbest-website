@@ -8,7 +8,7 @@ declare(strict_types=1);
  * folder and emails the request to the team.
  */
 
-const OWNER_EMAIL      = 'info.dbest85@gmail.com';
+const OWNER_EMAIL      = 'info@dbestinnovation.com';
 const FROM_EMAIL       = 'no-reply@dbestinnovation.com';
 const SITE_NAME        = 'DBest Innovation';
 const SITE_PHONE_WA    = '918527747545';

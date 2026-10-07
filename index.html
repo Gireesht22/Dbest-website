@@ -32,7 +32,7 @@
   "description": "Interior fit-out, civil and maintenance contractor for corporate offices, cafés, retail stores and residential villas.",
   "image": "images/hero-slide-1.jpg",
   "logo": "logos/dbest-logo-gold.png",
-  "email": "info.dbest85@gmail.com",
+  "email": "info@dbestinnovation.com",
   "telephone": "+91-8527747545",
   "taxID": "07FHRPP3804A1ZC",
   "address": {
@@ -541,25 +541,66 @@
 
   /* ---------- REPAIR & MAINTENANCE ---------- */
   .maintenance{
-    background:linear-gradient(135deg,#1F5E78 0%,#184a5f 100%);
-    color:var(--white);
-    padding:72px 0;
+    background:var(--white);
+    padding:80px 0;
   }
   .maintenance-inner{
     display:grid;
-    grid-template-columns:1.05fr 1fr;
-    gap:56px;
+    grid-template-columns:1fr 1.15fr;
+    gap:64px;
     align-items:center;
   }
-  .maintenance .eyebrow-line{color:#E3EEF3;margin-bottom:16px;}
-  .maintenance .eyebrow-line i{background:#8CC4DC;}
-  .maintenance h2{font-size:34px;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px;}
-  .maintenance-copy > p{font-size:16px;line-height:1.7;color:#E3EEF3;margin-bottom:26px;max-width:520px;}
-  .maintenance-cta{display:inline-block;background:var(--white);color:var(--accent);padding:14px 26px;border-radius:6px;font-size:15px;font-weight:700;transition:background .2s ease,color .2s ease;}
-  .maintenance-cta:hover{background:#E8F2F6;color:var(--accent-dark);}
-  .maintenance-copy .maintenance-note{font-size:13px;color:#C7DDE7;margin:14px 0 0;}
-  .maintenance-chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;}
-  .maintenance-chips li{padding:9px 16px;border:1px solid rgba(255,255,255,0.28);background:rgba(255,255,255,0.08);border-radius:999px;font-size:14px;font-weight:500;}
+  .maintenance .eyebrow-line{color:#5a6068;margin-bottom:16px;}
+  .maintenance h2{font-size:36px;line-height:1.15;letter-spacing:-0.5px;color:var(--body-text);margin-bottom:16px;}
+  .maintenance-copy > p{font-size:16px;line-height:1.7;color:#5a6068;margin-bottom:28px;max-width:500px;}
+  .maintenance-cta{display:inline-block;padding:14px 28px;border-radius:6px;font-size:15px;font-weight:700;}
+  .maintenance-copy .maintenance-note{font-size:13px;color:#6B7178;margin:14px 0 0;}
+  .maintenance-chips{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .maintenance-chips li{
+    position:relative;
+    padding:14px 14px 14px 44px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--body-text);
+    box-shadow:0 1px 2px rgba(20,30,40,0.04);
+    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  .maintenance-chips li::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:50%;
+    width:20px;
+    height:20px;
+    margin-top:-10px;
+    border-radius:50%;
+    background:#E4EEF3;
+  }
+  .maintenance-chips li::after{
+    content:"";
+    position:absolute;
+    left:21px;
+    top:50%;
+    width:5px;
+    height:9px;
+    margin-top:-6px;
+    border:solid var(--accent);
+    border-width:0 2px 2px 0;
+    transform:rotate(45deg);
+  }
+  .maintenance-chips li:hover{
+    border-color:var(--accent);
+    box-shadow:0 6px 18px rgba(31,94,120,0.12);
+    transform:translateY(-2px);
+  }
 
   /* ---------- LOGO STRIP ---------- */
   .logo-strip{
@@ -1228,6 +1269,7 @@
 
   @media (max-width: 900px){
     .maintenance-inner{grid-template-columns:1fr;gap:32px;}
+    .maintenance{padding:56px 0;}
     .maintenance h2{font-size:28px;}
     .hero-text h1{font-size:38px;}
     .bento-card.large,.bento-card.small,.bento-card.half{grid-column:span 10;}
@@ -1369,9 +1411,9 @@
 
     <nav>
       <ul class="nav-links">
+        <li><a href="#maintenance">Repair &amp; Maintenance</a></li>
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#maintenance">Repair &amp; Maintenance</a></li>
         <li><a href="#process">Our Process</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
@@ -1386,9 +1428,9 @@
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
+    <a href="#maintenance">Repair &amp; Maintenance</a>
     <a href="#expertise">Expertise</a>
     <a href="#portfolio">Portfolio</a>
-    <a href="#maintenance">Repair &amp; Maintenance</a>
     <a href="#process">Our Process</a>
     <a href="#contact">Contact Us</a>
     <a href="#contact" class="btn-cta">Request a Consultation</a>
@@ -1419,6 +1461,35 @@
 
       <div class="hero-slider-dots" id="heroDots"></div>
     </div>
+  </div>
+</section>
+
+<!-- ================= REPAIR & MAINTENANCE ================= -->
+<section class="maintenance" id="maintenance">
+  <div class="container maintenance-inner">
+    <div class="maintenance-copy fade-in">
+      <span class="eyebrow-line"><i></i>REPAIR &amp; MAINTENANCE</span>
+      <h2>Keep your space running, long after handover</h2>
+      <p>We also repair and maintain commercial fit-outs and turnkey projects. Tell us what needs attention, add photos from your phone, and our site-visit team will contact you to inspect and quote.</p>
+      <a href="repair-maintenance.html" class="btn-primary maintenance-cta">Request a site visit</a>
+      <p class="maintenance-note">Upload up to 10 photos &middot; Pricing shared after inspection</p>
+    </div>
+    <ul class="maintenance-chips fade-in" aria-label="Services we repair and maintain">
+      <li>Electrical</li>
+      <li>Plumbing &amp; sanitary</li>
+      <li>Roofing &amp; waterproofing</li>
+      <li>Painting</li>
+      <li>Cleaning &amp; deep cleaning</li>
+      <li>False ceiling</li>
+      <li>Carpentry &amp; furniture</li>
+      <li>Flooring</li>
+      <li>Glass &amp; partitions</li>
+      <li>AC / HVAC</li>
+      <li>Civil &amp; masonry</li>
+      <li>Fire safety</li>
+      <li>CCTV &amp; data</li>
+      <li>Annual maintenance (AMC)</li>
+    </ul>
   </div>
 </section>
 
@@ -1480,35 +1551,6 @@
         <a href="#contact" class="expertise-link">Enquire <span>&rarr;</span></a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= REPAIR & MAINTENANCE ================= -->
-<section class="maintenance" id="maintenance">
-  <div class="container maintenance-inner">
-    <div class="maintenance-copy fade-in">
-      <span class="eyebrow-line"><i></i>REPAIR &amp; MAINTENANCE</span>
-      <h2>Keep your space running, long after handover</h2>
-      <p>We also repair and maintain commercial fit-outs and turnkey projects. Tell us what needs attention, add photos from your phone, and our site-visit team will contact you to inspect and quote.</p>
-      <a href="repair-maintenance.html" class="btn-primary maintenance-cta">Request a site visit</a>
-      <p class="maintenance-note">Upload up to 10 photos &middot; Pricing shared after inspection</p>
-    </div>
-    <ul class="maintenance-chips fade-in" aria-label="Services we repair and maintain">
-      <li>Electrical</li>
-      <li>Plumbing &amp; sanitary</li>
-      <li>Roofing &amp; waterproofing</li>
-      <li>Painting</li>
-      <li>Cleaning &amp; deep cleaning</li>
-      <li>False ceiling</li>
-      <li>Carpentry &amp; furniture</li>
-      <li>Flooring</li>
-      <li>Glass &amp; partitions</li>
-      <li>AC / HVAC</li>
-      <li>Civil &amp; masonry</li>
-      <li>Fire safety</li>
-      <li>CCTV &amp; data</li>
-      <li>Annual maintenance (AMC)</li>
-    </ul>
   </div>
 </section>
 
@@ -1752,7 +1794,7 @@
 
           <div class="consent-field">
             <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">I agree to DBest Innovation using my name, email and project details to respond to this enquiry and prepare a quote, as described in the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>. I can withdraw this consent at any time by emailing <a href="mailto:info.dbest85@gmail.com">info.dbest85@gmail.com</a>.</label>
+            <label for="consent">I agree to DBest Innovation using my name, email and project details to respond to this enquiry and prepare a quote, as described in the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>. I can withdraw this consent at any time by emailing <a href="mailto:info@dbestinnovation.com">info@dbestinnovation.com</a>.</label>
           </div>
 
           <button type="submit" class="btn-primary contact-submit">Send Brief on WhatsApp <span>&rarr;</span></button>
@@ -1770,7 +1812,7 @@
           </div>
           <div>
             <h4>Email</h4>
-            <p><a href="mailto:info.dbest85@gmail.com" class="contact-link">info.dbest85@gmail.com</a></p>
+            <p><a href="mailto:info@dbestinnovation.com" class="contact-link">info@dbestinnovation.com</a></p>
           </div>
         </div>
 
